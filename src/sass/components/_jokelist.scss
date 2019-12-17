@@ -1,0 +1,96 @@
+.jokelist {
+  display: flex;
+  width: 80%;
+  height: 80%;
+
+  @media screen and (min-width: 0px) and (max-width: 800px) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__sidebar {
+    background: $sidebar-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+
+    @media screen and (min-width: 0px) and (max-width: 800px) {
+      width: 100%;
+    }
+
+    &_button {
+      font-size: 1.5rem;
+      width: 55%;
+      border-radius: 2rem;
+      padding: 1rem 2rem;
+      color: $light-color;
+      font-weight: bold;
+      word-spacing: 2rem;
+      margin: 2rem;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(
+        135deg,
+        $primary-color 0%,
+        $primary-color 50%,
+        $secondary-color 50%,
+        $secondary-color 50%
+      );
+      transition: all 0.2s cubic-bezier(0.2, 1, 0.2, 1);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    &_title {
+      font-size: 4rem;
+      margin: 2rem;
+      color: $light-color;
+      font-weight: 300;
+      letter-spacing: 0.6rem;
+
+      & span {
+        letter-spacing: 0;
+        font-weight: bold;
+      }
+    }
+    & img {
+      width: 50%;
+      border-radius: 50%;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &_jokes {
+    height: 90%;
+    background: $light-color;
+    align-self: center;
+    width: 70%;
+    overflow-y: auto;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+
+    @media screen and (min-width: 0px) and (max-width: 800px) {
+      height: auto;
+      width: 100%;
+    }
+
+    &_error {
+      text-align: center;
+      margin: 2rem;
+
+      &_message {
+        font-size: 3rem;
+        margin: 2rem;
+        color: #cccccc;
+        font-weight: 300;
+        letter-spacing: 0.3rem;
+      }
+    }
+  }
+}

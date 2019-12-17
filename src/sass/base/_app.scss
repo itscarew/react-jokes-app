@@ -1,0 +1,21 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  min-height: 100vh;
+  color: $text-color;
+  background: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $primary-color 50%,
+    $secondary-color 50%,
+    $secondary-color 50%
+  );
+
+  @media screen and (min-width: 0px) and (max-width: 800px) {
+    height: auto;
+    min-height: 100vh;
+  }
+}

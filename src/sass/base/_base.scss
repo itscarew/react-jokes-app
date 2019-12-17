@@ -1,0 +1,59 @@
+$primary-color: #b3e5fc;
+$secondary-color: #f06292;
+$text-color: #78909c;
+$sidebar-color: #9575cd;
+$light-color: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+
+  border: none;
+  font-family: "Lato", sans-serif;
+}
+
+::placeholder {
+  font-family: "Lato", sans-serif;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

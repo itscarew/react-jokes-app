@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.8;
+  min-height: 100vh; }
+
+p {
+  font-size: 1.2rem; }
+
+ul {
+  list-style: none; }
+
+a:link {
+  text-decoration: none; }
+
+input,
+textarea,
+select {
+  outline: none;
+  border: none;
+  font-family: "Lato", sans-serif; }
+
+::placeholder {
+  font-family: "Lato", sans-serif; }
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer; }
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 100vh;
+  color: #78909c;
+  background: linear-gradient(135deg, #b3e5fc 0%, #b3e5fc 50%, #f06292 50%, #f06292 50%); }
+  @media screen and (min-width: 0px) and (max-width: 800px) {
+    .app {
+      height: auto;
+      min-height: 100vh; } }
+
+.jokelist {
+  display: flex;
+  width: 80%;
+  height: 80%; }
+  @media screen and (min-width: 0px) and (max-width: 800px) {
+    .jokelist {
+      flex-direction: column;
+      width: 100%; } }
+  .jokelist__sidebar {
+    background: #9575cd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2; }
+    @media screen and (min-width: 0px) and (max-width: 800px) {
+      .jokelist__sidebar {
+        width: 100%; } }
+    .jokelist__sidebar_button {
+      font-size: 1.5rem;
+      width: 55%;
+      border-radius: 2rem;
+      padding: 1rem 2rem;
+      color: #fff;
+      font-weight: bold;
+      word-spacing: 2rem;
+      margin: 2rem;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, #b3e5fc 0%, #b3e5fc 50%, #f06292 50%, #f06292 50%);
+      transition: all 0.2s cubic-bezier(0.2, 1, 0.2, 1); }
+      .jokelist__sidebar_button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); }
+    .jokelist__sidebar_title {
+      font-size: 4rem;
+      margin: 2rem;
+      color: #fff;
+      font-weight: 300;
+      letter-spacing: 0.6rem; }
+      .jokelist__sidebar_title span {
+        letter-spacing: 0;
+        font-weight: bold; }
+    .jokelist__sidebar img {
+      width: 50%;
+      border-radius: 50%;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1); }
+  .jokelist_jokes {
+    height: 90%;
+    background: #fff;
+    align-self: center;
+    width: 70%;
+    overflow-y: auto;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1); }
+    @media screen and (min-width: 0px) and (max-width: 800px) {
+      .jokelist_jokes {
+        height: auto;
+        width: 100%; } }
+    .jokelist_jokes_error {
+      text-align: center;
+      margin: 2rem; }
+      .jokelist_jokes_error_message {
+        font-size: 3rem;
+        margin: 2rem;
+        color: #cccccc;
+        font-weight: 300;
+        letter-spacing: 0.3rem; }
+
+.joke {
+  display: flex;
+  border-bottom: 0.2rem solid #eeeeee;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  padding: 1rem;
+  transition: all 0.1s ease-in; }
+  .joke:hover {
+    background: #eeeeee;
+    border-bottom: 0.2rem solid #dddddd; }
+  .joke__button {
+    display: flex;
+    margin-right: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 15%; }
+    @media screen and (min-width: 0px) and (max-width: 800px) {
+      .joke__button {
+        width: 25%; } }
+    .joke__button_arrowUp {
+      transition: all 0.1s ease-in-out; }
+      .joke__button_arrowUp:hover {
+        transform: translateY(-3px) scale(1.2); }
+    .joke__button_arrowDown {
+      transition: all 0.1s ease-in-out; }
+      .joke__button_arrowDown:hover {
+        transform: translateY(3px) scale(1.2); }
+  .joke__votes {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    border: 0.3rem solid red;
+    box-shadow: 0 10px 38px rgba(0, 0, 0, 0.2), 0 10px 12px rgba(0, 0, 0, 0.1); }
+  .joke__text {
+    width: 75%;
+    font-size: 1.2rem; }
+  .joke__smiley {
+    font-size: 3rem;
+    margin-left: auto;
+    border-radius: 50%;
+    box-shadow: 0 10px 38px rgba(0, 0, 0, 0.2), 0 10px 12px rgba(0, 0, 0, 0.1); }
